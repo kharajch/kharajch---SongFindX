@@ -15,7 +15,7 @@ const Card = (props) => {
 
   for (let i = 0; i < music.length; i++) {
     music_files.push(<audio src={`/music/audio/${music[i].name}.mp3`} index={i} key={i}></audio>)
-    
+
   }
 
   const [Play, setPlay] = useState(false)
@@ -38,6 +38,7 @@ const Card = (props) => {
       <p>{props.name}</p>
       <div className="card_btn">
         <button onClick={PlayMusic}><img src="/buttons/play.svg" alt="Play" /></button>
+        <button><a href={`/music/audio/${music[props.index].name}.mp3`} download><img src="/buttons/download.png" alt="Download" /></a></button>
       </div>
       <div className="audio-tags">
         {Play && <audio autoPlay={true} src={`/music/audio/${music[props.index].name}.mp3`} index={props.index}></audio>}

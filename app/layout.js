@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Sidenav from "@/components/Sidenav";
-import Playbar from "@/components/Playbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,8 +20,8 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: "kharajch--PlayMusic",
-  description: "Music Player Created -- By Kharaj Chakraborty (@kharajch)",
+  title: "kharajch--SongFindX",
+  description: "Find And Download Songs --- Created By Kharaj Chakraborty (@kharajch)",
 };
 
 export default function RootLayout({ children }) {
@@ -32,7 +31,6 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Sidenav />
         {children}
-        <Playbar />
       </body>
     </html>
   );
